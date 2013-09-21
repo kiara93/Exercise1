@@ -1,5 +1,6 @@
 #include "Manager.h"
 #include <iostream>
+#include "Employee.h"
 
 Manager::Manager()
    {
@@ -8,7 +9,7 @@ Manager::Manager()
 
 void Manager::getWorkerHours(Employee* emp)
    {
-   std::cout << "Employee #" << emp->getID() << " has logged " << emp->getHours() << " hours..." << std::endl;
+   std::cout << "Employee #" << emp ->getID() << " has logged " << emp->getHours() << " hours..." << std::endl;
    std::cout << "Thanks " << emp->getName() << "!" << std::endl << std::endl;
    totalHours += emp->getHours();
    }

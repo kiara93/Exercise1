@@ -1,6 +1,7 @@
 #include "Manager.h"
 #include "Employee.h"
 #include <iostream>
+using namespace std;
 
 int main()
    {
@@ -11,10 +12,10 @@ int main()
    Employee alex(3, "Alex");
    Employee sarah(4, "Sarah");
 
-   dan.setBoss(man);
-   mike.setBoss(man);
-   alex.setBoss(man);
-   sarah.setBoss(man);
+   dan.setBoss(&man);
+   mike.setBoss(&man);
+   alex.setBoss(&man);
+   sarah.setBoss(&man);
 
    dan.work(2);
    mike.work(2);
@@ -57,7 +58,6 @@ int main()
    sarah.report();
    man.report();
    man.report();
-
-
+   system("pause");
    return 0;
    }

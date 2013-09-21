@@ -6,7 +6,7 @@
 Employee::Employee(int id, char* name)
    {
    ID = id;
-   Employee::name = new char[strlen(name)];
+   Employee::name = new char[strlen(name)+1];
    strcpy(Employee::name, name);
    boss = 0;
    hours = 0;
@@ -38,12 +38,17 @@ void Employee::report()
       }
    }
 
-int Employee::getHours()
+int Employee::getHours() const
    {
    return hours;
    }
 
-int Employee::getID()
+int Employee::getID() const
    {
    return ID;
    }
+
+const char* Employee::getName() const
+{
+	return name;
+}
